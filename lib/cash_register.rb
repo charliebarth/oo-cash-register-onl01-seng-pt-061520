@@ -28,7 +28,6 @@ class CashRegister
   end
   
   def items
-    add_item(gets, gets, gets)
     @@items
   end
   
