@@ -39,8 +39,7 @@ class CashRegister
   
   def void_last_transaction
     count = @@item_prices.size - 1
-    counts = @@items.size - 1
-    @@items[counts].pop
+    @@items.pop
     new_total = @total - @@item_prices[count]
     @total = new_total
   end
