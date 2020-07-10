@@ -31,7 +31,6 @@ class CashRegister
   end
   
   def items
-    @@items.clear
     add_item(title, price, quantity)
     @quantity.times do 
       @@items << @title
