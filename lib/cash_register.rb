@@ -43,8 +43,6 @@ class CashRegister
     @@items[counts].delete
     new_total = @total - @@item_prices[count]
     @total = new_total
-    if @@items.size == 0
-      @total = 0
     else
   end
 end
