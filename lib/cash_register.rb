@@ -43,5 +43,6 @@ class CashRegister
     else
       count = @@item_prices.size - 2
     @total = @@item_prices[count]
+    end
   end
 end
