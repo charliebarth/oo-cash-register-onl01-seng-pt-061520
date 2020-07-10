@@ -6,7 +6,7 @@ class CashRegister
   
   def initialize(employee_discount = nil)
     @employee_discount = employee_discount
-    @total.clear
+    @total = 0
     @@items.clear
     @@item_prices.clear
   end
