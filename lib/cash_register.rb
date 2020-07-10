@@ -39,6 +39,7 @@ class CashRegister
   
   def void_last_transaction
     count = @@item_prices.size - 1
+    puts @@item_prices[count]
     @total - @@item_prices[count]
   end
 end
