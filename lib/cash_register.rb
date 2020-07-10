@@ -32,8 +32,7 @@ class CashRegister
   
   def items
     add_item(title, price, quantity)
-    @@items << @title
-    @quantity - 1.times do 
+    @quantity + 1.times do 
       @@items << @title
     end
     @@items
