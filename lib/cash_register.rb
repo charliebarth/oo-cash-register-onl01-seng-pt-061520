@@ -8,6 +8,7 @@ class CashRegister
     @employee_discount = employee_discount
     @total = 0
     @@items.clear
+    @@item_prices.clear
   end
   
   def discount
