@@ -32,7 +32,7 @@ class CashRegister
   
   def items
     @@items.clear
-    add_item(title, price, quantity = 1)
+    add_item(title, price, quantity)
     @quantity.times do 
       @@items << @title
     end
