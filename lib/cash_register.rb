@@ -3,12 +3,14 @@ class CashRegister
   @total = 0
   @@items = []
   @@item_prices = []
+  @@quantity = []
   
   def initialize(employee_discount = nil)
     @employee_discount = employee_discount
     @total = 0
     @@items.clear
     @@item_prices.clear
+    @@quantity.clear
   end
   
   def discount
@@ -39,8 +41,11 @@ class CashRegister
   
   def void_last_transaction
     count = @@item_prices.size - 1
+    counts = @@quantity.size - 1
+    count.times do
     @@items.pop
     new_total = @total - @@item_prices[count]
     @total = new_total
+  end
   end
 end
