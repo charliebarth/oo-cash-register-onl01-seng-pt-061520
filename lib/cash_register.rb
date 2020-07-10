@@ -38,7 +38,10 @@ class CashRegister
   end
   
   def void_last_transaction
-    count = @@item_prices.size - 2
+    count = @@item_prices.size - 1
+    counts = @@item.size - 1
+    @@items[counts].delete
+    
     @total = @@item_prices[count]
     if @@items.size == 0
       @total = 0
