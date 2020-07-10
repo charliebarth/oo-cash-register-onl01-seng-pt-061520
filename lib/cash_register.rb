@@ -18,6 +18,7 @@ class CashRegister
   end
   
   def add_item(title, price, quantity = 1)
+    @@quantity << quantity
     quantity.times do
       @@items << title
       @@item_prices << price
@@ -43,9 +44,9 @@ class CashRegister
     count = @@item_prices.size - 1
     counts = @@quantity.size - 1
     count.times do
-    @@items.pop
-    new_total = @total - @@item_prices[count]
-    @total = new_total
-  end
+      @@items.pop
+      new_total = @total - @@item_prices[count]
+      @total = new_total
+    end
   end
 end
