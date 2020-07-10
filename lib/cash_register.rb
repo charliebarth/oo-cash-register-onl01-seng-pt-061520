@@ -35,7 +35,6 @@ class CashRegister
     add_item(title, price, quantity = 1)
     @quantity.times do 
       @@items << @title
-      @@item_prices << @price
     end
     @@items
   end
